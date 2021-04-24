@@ -1,6 +1,6 @@
 https://romansuvorkov.github.io/messenger_example
 
-<!-- [![Build status](https://ci.appveyor.com/api/projects/status/39w2tcxoyq6oi75s?svg=true)](https://ci.appveyor.com/project/romansuvorkov/ahj-diploma-front) -->
+[![Build status](https://ci.appveyor.com/api/projects/status/uoit8r45no37q3gy?svg=true)](https://ci.appveyor.com/project/romansuvorkov/messenger-example)
 
 # Тестовая версия мессенджера
 
