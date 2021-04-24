@@ -1,0 +1,348 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #DCDCDC;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.messenger_container {
+  border: 1px solid black;
+  width: 60%;
+  height: 500px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.interface_container {
+  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.messenger_field_container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid green;
+}
+
+.messenger_field {
+  width: 100%;
+  height: 415px;
+  border: 1px solid brown;
+  background-color: brown;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.messenger_input_container {
+  width: 100%;
+  height: 25px;
+  position: relative;
+}
+
+.input_field {
+  width: 100%;
+  height: 25px;
+  padding-right: 15px;
+}
+
+.clip_btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/clip.png");
+  margin-top: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.input_btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/send.png");
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.background_image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.message {  
+  margin-top: 10px;
+  max-width: 90%;
+  background-color: grey;
+  border: 1px solid black;
+  /* display: block; */
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message_content {
+  display: block;
+  width: 100%;
+}
+
+.geo {
+  display: block;
+  width: 100%;
+}
+
+.image_message_item {
+  margin-top: 10px;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: grey;
+  margin-right: 10px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.link_download {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 15px;
+  top: 15px;
+  background-image: url("../img/download.png");
+  z-index: 20;
+}
+
+.input {
+  position: absolute;
+  top: -999px;
+}
+
+.focus {
+  background-color: greenyellow;
+}
+
+.image_preview {
+  width: 80%;
+  height: 80%;
+  z-index: 10;
+}
+
+.file_message_item {
+  margin-top: 10px;
+  width: 250px;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: grey;
+  margin-right: 10px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.file_preview {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+.favorite {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.favorite_false {
+  background-image: url("../img/star_empty.png");
+}
+
+.favorite_active {
+  background-image: url("../img/star.png");
+}
+
+.geo_on {
+  background-image: url("../img/geo.png");
+}
+
+.geo_off {
+  background-image: url("../img/geo_off.png");
+}
+
+.message_favorite {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+.message_vrapper {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.geo_btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.popup_container {
+  position: relative;
+  width: 50%;
+}
+
+.popup_location {
+  position: absolute;
+  background-color: white;
+  border: 1px solid red;
+  z-index: 110;
+  padding: 15px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.popup_reset {
+  display: block;
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.popup_ok {
+  display: block;
+  border: 1px solid black;
+  width: 100px;
+  text-align: center;
+  border-radius: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn_container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.sound_btn {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url('../img/mic.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 99;
+  top: 0;
+  right: 70px;
+  cursor: pointer;
+}
+
+.camera_btn {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url('../img/video_rec.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 99;
+  top: 0;
+  right: 40px;
+  cursor: pointer;
+}
+
+.rec_interface {
+  position: absolute;
+  z-index: 99;
+  top: 5px;
+  right: 10px;
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.video {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.save_rec {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/affirm.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.cancel_rec {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/cancel.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.media {
+  width: 90%;
+  margin-top: 25px;
+}
+
