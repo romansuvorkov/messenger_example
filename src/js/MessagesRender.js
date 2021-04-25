@@ -6,17 +6,13 @@ export default class MessagesRender {
   }
 
   addMsg(obj, targetPlace) {
-    const searchlink = /(http[s]?:\/\/)[-\w.\/%а-яА-Я:]+/g; // eslint-disable-line no-useless-escape
     let messageText = obj.msg;
-    const matchedLinks = [...messageText.matchAll(searchlink)];
-
-    for (let i = 0; i < matchedLinks.length; i += 1) {
-      messageText = messageText.replace(matchedLinks[i][0], `
-      <a href="${matchedLinks[i][0]}">${matchedLinks[i][0]}</a>
-    `);
-    }
-    while (messageText.includes(String.fromCodePoint(0x000A))) {
-      messageText = messageText.replace(String.fromCodePoint(0x000A), '<br>');
+    let urlRegex = /(https?:\/\/[^\s]+)/g; // eslint-disable-line no-useless-escape
+    let messageWithLinks = messageText.replace(urlRegex, function(url) {
+      return '<a href="' + url + '">' + url + '</a>';
+    })
+    while (messageWithLinks.includes(String.fromCodePoint(0x000A))) {
+      messageWithLinks = messageWithLinks.replace(String.fromCodePoint(0x000A), '<br>');
     }
     const messageWrapper = document.createElement('div');
     messageWrapper.classList.add('message_vrapper');
@@ -30,7 +26,7 @@ export default class MessagesRender {
     const newMsg = document.createElement('div');
     newMsg.classList.add('message');
     const msgContent = document.createElement('span');
-    msgContent.innerHTML = `${messageText}`;
+    msgContent.innerHTML = `${messageWithLinks}`;
     msgContent.classList.add('message_content');
     newMsg.append(msgContent);
     messageWrapper.dataset.id = obj.id;

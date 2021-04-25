@@ -1,3 +1,6 @@
+// var Promise = require('promise-polyfill').default;
+// import Promise from 'promise-polyfill';
+
 export default class API {
   constructor() {
     // this.server = 'http://localhost:7070';

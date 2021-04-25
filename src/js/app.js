@@ -4,6 +4,7 @@ import MessagesRender from './MessagesRender';
 import GetGeolocation from './GetGeolocation';
 import Recorder from './Recorder';
 
+
 const api = new API();
 const renderer = new MessagesRender();
 const popupContainer = document.querySelector('.popup_container');
@@ -12,3 +13,4 @@ const msController = new MessengerController(api, renderer, geo);
 msController.init();
 const recorder = new Recorder(msController, popupContainer);
 recorder.init();
+

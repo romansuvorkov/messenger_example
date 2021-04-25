@@ -1,4 +1,7 @@
 import coordValidation from './coordValidation';
+// var Promise = require('promise-polyfill').default;
+// import Promise from 'promise-polyfill';
+
 
 export default class GetGeolocation {
   constructor(targetContainer) {
