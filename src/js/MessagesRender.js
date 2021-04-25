@@ -6,11 +6,9 @@ export default class MessagesRender {
   }
 
   addMsg(obj, targetPlace) {
-    let messageText = obj.msg;
-    let urlRegex = /(https?:\/\/[^\s]+)/g; // eslint-disable-line no-useless-escape
-    let messageWithLinks = messageText.replace(urlRegex, function(url) {
-      return '<a href="' + url + '">' + url + '</a>';
-    })
+    const messageText = obj.msg;
+    const urlRegex = /(https?:\/\/[^\s]+)/g; // eslint-disable-line no-useless-escape
+    let messageWithLinks = messageText.replace(urlRegex, (url) => `<a href="${url}">${url}</a>`);
     while (messageWithLinks.includes(String.fromCodePoint(0x000A))) {
       messageWithLinks = messageWithLinks.replace(String.fromCodePoint(0x000A), '<br>');
     }

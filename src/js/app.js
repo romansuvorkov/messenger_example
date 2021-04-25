@@ -13,4 +13,3 @@ const msController = new MessengerController(api, renderer, geo);
 msController.init();
 const recorder = new Recorder(msController, popupContainer);
 recorder.init();
-
